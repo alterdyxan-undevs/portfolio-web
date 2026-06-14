@@ -88,10 +88,11 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([ {"color": "#ff69b4", "font": {"color": "white"}, "id": "Kurumi", "label": "Kurumi", "shape": "dot", "size": 30, "title": "AI Assistant"},
+                  nodes = new vis.DataSet([ {"color": "#ff69b4", "font": {"color": "white"}, "id": "Kurumi", "label": "Kurumi", "shape": "dot", "size": 25, "title": "AI Assistant"},
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "OpenCV", "label": "OpenCV", "shape": "dot", "size": 10, "title": "Computer Vision"},
                                             {"color": "#87cefa", "font": {"color": "white"}, "id": "Dimas", "label": "Dimas", "shape": "dot", "size": 50, "title": "Creator"},
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "YouTube", "label": "YouTube", "shape": "dot", "size": 10, "title": "Platform Video"},
+                                            {"color": "#ffffff", "font": {"color": "white"}, "id": "Voice", "label": "Voice", "shape": "dot", "size": 10, "title": "Voice Module"},
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "Tiktok", "label": "Tiktok", "shape": "dot", "size": 10, "title": "Platform Video"},
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "Threevrm", "label": "Threevrm", "shape": "dot", "size": 10, "title": "Tubuh Virtual /avatar"},
                                             {"color": "green", "font": {"color": "white"}, "id": "Brain", "label": "Brain", "shape": "dot", "size": 10, "title": "Otak utama"},
@@ -99,24 +100,51 @@
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "Websocket", "label": "Websocket", "shape": "dot", "size": 10, "title": "Bridge"},
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "stm", "label": "Short Term Memory", "shape": "dot", "size": 10, "title": "Memory"},
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "ltm", "label": "Long Term Memory", "shape": "dot", "size": 10, "title": "Memory"},
+                                            {"color": "#ffffff", "font": {"color": "white"}, "id": "input-router", "label": "Input Router", "shape": "dot", "size": 10, "title": "Input Router"},
+                                            {"color": "#ffffff", "font": {"color": "white"}, "id": "output-router", "label": "Output Router", "shape": "dot", "size": 10, "title": "Output Router"},
+                                            {"color": "#ffffff", "font": {"color": "white"}, "id": "tts", "label": "TTS", "shape": "dot", "size": 10, "title": "TextToSpeech"},
+                                            {"color": "#ffffff", "font": {"color": "white"}, "id": "stt", "label": "STT", "shape": "dot", "size": 10, "title": "SpeechToText"},
                                             {"color": "#ffffff", "font": {"color": "white"}, "id": "vmem", "label": "Vision Memory", "shape": "dot", "size": 10, "title": "Memory"}
                                           ]);
-                  edges = new vis.DataSet([ {"from": "Kurumi", "to": "OpenCV", "width": 10}, 
-                                            {"from": "Kurumi", "to": "Dimas", "width": 5,"color":"lightgray"}, 
-                                            {"from": "Kurumi", "to": "YouTube", "width": 10},
-                                            {"from": "Kurumi", "to": "Tiktok", "width": 10},
-                                            {"from": "Kurumi", "to": "Threevrm", "width": 10},
-                                            {"from": "Brain", "to": "Memory", "width": 5,"color":"white"},
-                                            {"from": "Websocket", "to": "Threevrm", "width": 5,"color":"white"},
-                                            {"from": "Websocket", "to": "Brain", "width": 5,"color":"white"},
-                                            {"from": "Memory", "to": "stm", "width": 5,"color":"white"},
-                                            {"from": "Memory", "to": "ltm", "width": 5,"color":"white"},
-                                            {"from": "Memory", "to": "vmem", "width": 5,"color":"white"},
-                                            {"from": "YouTube", "to": "Memory", "width": 5,"color":"white"},
-                                            {"from": "Tiktok", "to": "Memory", "width": 5,"color":"white"},
-                                            {"from": "OpenCV", "to": "Memory", "width": 5,"color":"white"},
-                                            {"from": "Kurumi", "to": "Brain", "width": 10},
-                                            {"from": "Kurumi", "to": "Memory", "width": 10}
+                  edges = new vis.DataSet([ {"from": "Kurumi", "to": "OpenCV"}, 
+                                            {"from": "Kurumi", "to": "Dimas"}, 
+                                            {"from": "Dimas", "to": "Kurumi"}, 
+                                            {"from": "Kurumi", "to": "YouTube"},
+                                            {"from": "Kurumi", "to": "Voice"},
+                                            {"from": "Kurumi", "to": "Tiktok"},
+                                            {"from": "Kurumi", "to": "Threevrm"},
+                                            {"from": "Brain", "to": "Memory"},
+                                            {"from": "Websocket", "to": "input-router"},
+                                            {"from": "Websocket", "to": "output-router"},
+                                            {"from": "Brain", "to": "input-router"},
+                                            {"from": "Brain", "to": "output-router"},
+                                            {"from": "Memory", "to": "input-router"},
+                                            {"from": "Memory", "to": "output-router"},
+                                            {"from": "Memory", "to": "Threevrm"},
+                                            {"from": "Memory", "to": "YouTube"},
+                                            {"from": "Memory", "to": "Tiktok"},
+                                            {"from": "Memory", "to": "Kurumi"},
+                                            {"from": "Threevrm", "to": "Kurumi"},
+                                            {"from": "Brain", "to": "OpenCV"},
+                                            {"from": "Brain", "to": "Kurumi"},
+                                            {"from": "Brain", "to": "Threevrm"},
+                                            {"from": "OpenCV", "to": "Brain"},
+                                            {"from": "Brain", "to": "Memory"},
+                                            {"from": "Websocket", "to": "Threevrm"},
+                                            {"from": "Websocket", "to": "Brain"},
+                                            {"from": "Memory", "to": "stm"},
+                                            {"from": "Memory", "to": "ltm"},
+                                            {"from": "Memory", "to": "vmem"},
+                                            {"from": "YouTube", "to": "Memory"},
+                                            {"from": "Tiktok", "to": "Memory"},
+                                            {"from": "OpenCV", "to": "Memory"},
+                                            {"from": "Kurumi", "to": "Brain"},
+                                            {"from": "Voice", "to": "Brain"},
+                                            {"from": "Voice", "to": "stt"},
+                                            {"from": "Voice", "to": "tts"},
+                                            {"from": "Voice", "to": "Memory"},
+                                            {"from": "tts", "to": "Kurumi"},
+                                            {"from": "Kurumi", "to": "Memory"}
                                           ]);
 
                   nodeColors = {};
@@ -128,7 +156,7 @@
                   // adding nodes and edges to the graph
                   data = {nodes: nodes, edges: edges};
 
-                  var options = {"physics": {"barnesHut": {"gravitationalConstant": -3000, "springLength": 150}}};
+                  var options = {"physics": {"barnesHut": {"gravitationalConstant": -18000, "springLength": 120, "springConstant": 0.01, "damping": 0.09}, "minVelocity": 0.75}, "nodes": {"font": {"size": 14}}, "interaction": {"hover": true, "tooltipDelay": 100}};
 
                   
 
