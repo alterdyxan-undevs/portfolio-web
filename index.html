@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dimas Afroif | AI Developer</title>
+<title>ARCHIVE ALTERDYXAN | A.I.D.E.</title>
+<meta name="description" content="Dimas Afroif — AI developer building Kurumi Hanayume, an offline AI VTuber companion with vision, memory, voice, and live-stream integration, as the foundation for a future humanoid robot.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -12,6 +13,10 @@
 .brain-frame {
     width: 100%;
     height: 80vh;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 *{
@@ -118,6 +123,78 @@ margin-bottom:20px;
 background:linear-gradient(90deg,#a855f7,#60a5fa);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+}
+
+.glitch-text{
+display:block;
+position:relative;
+font-size:60px;
+font-weight:800;
+line-height:1.1;
+}
+
+@media(max-width:768px){
+
+.glitch-text{
+font-size:38px;
+}
+
+.glitch-text{
+display:inline-block;
+/* min-width:18ch; */
+}
+
+}
+.archive-status{
+display:block;
+margin-top:10px;
+margin-bottom:15px;
+
+font-size:13px;
+letter-spacing:3px;
+
+color:#c084fc;
+opacity:.8;
+
+font-family:monospace;
+}
+
+/* .glitching{
+text-shadow:
+2px 0 #ff00ff,
+-2px 0 #00ffff;
+} */
+@keyframes glitch{
+
+0%{
+transform:translate(0);
+text-shadow:
+3px 0 #ff00ff,
+-3px 0 #00ffff;
+}
+
+20%{
+transform:translate(-3px,2px);
+}
+
+40%{
+transform:translate(3px,-2px);
+}
+
+60%{
+transform:translate(-2px,-1px);
+}
+
+80%{
+transform:translate(2px,2px);
+}
+
+100%{
+transform:translate(0);
+text-shadow:
+-3px 0 #ff00ff,
+3px 0 #00ffff;
+}
 }
 
 .hero p{
@@ -256,6 +333,209 @@ border-radius:20px;
 background:#111827;
 }
 
+.kurumi-case{
+display:flex;
+flex-direction:column;
+gap:60px;
+}
+
+.kurumi-intro{
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.kurumi-intro-text{
+flex:1.2;
+min-width:300px;
+}
+
+.kurumi-intro-text .eyebrow{
+color:#c084fc;
+text-transform:uppercase;
+letter-spacing:2px;
+font-size:13px;
+font-weight:600;
+margin-bottom:14px;
+display:block;
+}
+
+.kurumi-intro-text h3{
+font-size:32px;
+margin-bottom:18px;
+line-height:1.25;
+}
+
+.kurumi-intro-text p{
+color:#b4b7d1;
+line-height:1.8;
+margin-bottom:18px;
+}
+
+.kurumi-intro-img{
+flex:1;
+min-width:280px;
+}
+
+.kurumi-intro-img img{
+width:100%;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 0 40px rgba(168,85,247,.2);
+}
+
+.tag-row{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.tag{
+padding:8px 16px;
+border-radius:999px;
+border:1px solid rgba(168,85,247,.35);
+background:rgba(168,85,247,.08);
+color:#d8b4fe;
+font-size:13px;
+font-weight:500;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.feature{
+padding:25px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+border-radius:16px;
+transition:.3s;
+}
+
+.feature:hover{
+border-color:rgba(168,85,247,.4);
+transform:translateY(-4px);
+}
+
+.feature .icon{
+font-size:22px;
+margin-bottom:12px;
+display:block;
+}
+
+.feature h4{
+font-size:17px;
+margin-bottom:8px;
+}
+
+.feature p{
+color:#9ca0c0;
+font-size:14px;
+line-height:1.6;
+}
+
+.subsection-title{
+font-size:22px;
+margin-bottom:24px;
+color:#e9d5ff;
+}
+
+.challenge-list{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.challenge-item{
+display:flex;
+gap:16px;
+padding:18px 20px;
+background:rgba(255,255,255,.03);
+border-left:2px solid #a855f7;
+border-radius:0 12px 12px 0;
+}
+
+.challenge-item .label{
+color:#c084fc;
+font-weight:600;
+font-size:13px;
+white-space:nowrap;
+}
+
+.challenge-item p{
+color:#9ca0c0;
+font-size:14px;
+line-height:1.6;
+}
+
+.roadmap-box{
+padding:24px 28px;
+background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(99,102,241,.06));
+border:1px solid rgba(168,85,247,.25);
+border-radius:16px;
+color:#cdd0e8;
+line-height:1.7;
+}
+
+.case-cta{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.btn-outline{
+display:inline-block;
+padding:13px 26px;
+border:1px solid rgba(168,85,247,.4);
+border-radius:12px;
+text-decoration:none;
+color:#d8b4fe;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-outline:hover{
+background:rgba(168,85,247,.1);
+}
+
+.other-experiments{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+}
+
+.exp-item{
+padding:20px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.07);
+border-radius:14px;
+}
+
+.exp-item h4{
+font-size:15px;
+margin-bottom:6px;
+color:#e0e2f5;
+}
+
+.exp-item p{
+color:#8b8eac;
+font-size:13px;
+line-height:1.5;
+}
+
+.section-sub-label{
+text-align:center;
+color:#8b8eac;
+margin-top:-25px;
+margin-bottom:40px;
+font-size:14px;
+}
+
 .contact{
 text-align:center;
 }
@@ -290,7 +570,22 @@ display:none;
 width:280px;
 height:280px;
 }
+.identity-container{
+min-height:80px;
+display:flex;
+align-items:center;
+}
 
+#glitch-name{
+display:block;
+font-size:clamp(32px,8vw,60px);
+font-weight:800;
+line-height:1.1;
+}
+.identity-container{
+height:80px;
+overflow:hidden;
+}
 }
 
 </style>
@@ -317,17 +612,25 @@ AI Developer & Engineer - [ A.I.D.E ] -
 </div>
 
 <h1>
-Dimas Afroif
 
-<br>
+<div class="identity-container">
+    <span id="glitch-name">
+        ARCHIVE ALTERDYXAN
+    </span>
+</div>
 
 <span class="gradient">
 AI Developer
 </span>
 Engineer
+
 </h1>
 
+
 <p>
+    <span id="archive-status" class="archive-status">
+[ SYSTEM ONLINE ]
+</span>
 Who I wanted to become?
 
 A developer?
@@ -356,7 +659,7 @@ View Projects
 <div class="avatar">
 
 <!-- GANTI KE FOTO PROFIL -->
-<img src="assets/profile.jpg">
+<img src="assets/profile.jpg" alt="Dimas Afroif">
 
 </div>
 
@@ -367,66 +670,142 @@ View Projects
 <section id="projects">
 
 <h2 class="section-title">
-Featured Projects
+Featured Project
 </h2>
+<p class="section-sub-label">The flagship build — and the foundation of everything I'm working toward.</p>
 
-<div class="projects">
+<div class="kurumi-case">
 
-<div class="card">
+<div class="kurumi-intro">
 
-<img src="assets/vision.png">
+<div class="kurumi-intro-text">
 
-<div class="card-content">
+<span class="eyebrow">Case Study</span>
 
-<h3> ]---[ </h3>
-
-<p>
--------
--------
--------
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="assets/kurumi.png">
-
-<div class="card-content">
-
-<h3>Kurumi Hanayume </h3>
+<h3>Kurumi Hanayume — Offline AI VTuber Companion</h3>
 
 <p>
-An <font color="red">Offline </font>AI Assistant with Memory System,
-Vision Awareness, Voice Interaction,
-VRM Avatar and Ollama Integration.
+Kurumi is a fully offline AI companion that sees, remembers, talks, and plays — built from scratch on a single Ryzen 5 8500G machine, no cloud APIs required. It runs on a local LLM through Ollama, watches the world through a MediaPipe + moondream vision pipeline, and streams live on TikTok and YouTube, reacting to chat in real time.
 </p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="assets/handtracking.png">
-
-<div class="card-content">
-
-<h3> ]---[ </h3>
 
 <p>
--------
--------
--------
+It's not a finished product — it's a foundation. Every subsystem here (vision, memory, voice, motor-style decision making) is a building block toward a longer goal: a physical humanoid robot, PGR-inspired, with this same AI as its brain.
 </p>
 
+<div class="tag-row">
+<span class="tag">Python</span>
+<span class="tag">Ollama (local LLM)</span>
+<span class="tag">MediaPipe</span>
+<span class="tag">moondream</span>
+<span class="tag">Piper TTS / STT</span>
+<span class="tag">WebSocket</span>
+<span class="tag">TikTokLive / pytchat</span>
 </div>
 
 </div>
 
+<div class="kurumi-intro-img">
+<img src="assets/kurumi.png" alt="Kurumi Hanayume VRM avatar">
+</div>
 
+</div>
+
+<div>
+
+<h4 class="subsection-title">What it can do</h4>
+
+<div class="feature-grid">
+
+<div class="feature">
+<span class="icon">🧠</span>
+<h4>Memory System</h4>
+<p>Short- and long-term memory modules so Kurumi recalls past conversations and context instead of starting fresh every session.</p>
+</div>
+
+<div class="feature">
+<span class="icon">👁️</span>
+<h4>Vision Awareness <br> <small style="color: red;">- development in progress -</small></h4>
+<p>Face mesh, pose, and gesture detection via MediaPipe, plus screen-capture awareness powered by moondream for context on what's happening on-screen.</p>
+</div>
+
+<div class="feature">
+<span class="icon">📡</span>
+<h4>Live Chat Integration</h4>
+<p>Real-time TikTok and YouTube chat integration (TikTokLive + pytchat), letting viewers talk to and influence Kurumi live on stream.</p>
+</div>
+
+
+<div class="feature">
+<span class="icon">🗣️</span>
+<h4>Voice Interaction</h4>
+<p>Full TTS/STT pipeline running locally with Piper, paired with a VRM avatar for expressive, real-time responses.</p>
+</div>
+
+<div class="feature">
+<span class="icon">🧩</span>
+<h4>Modular Skill Registry</h4>
+<p>A registry-based architecture where new abilities — trading bot, games, future modules — register as plug-in skills rather than hardcoded features.</p>
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<h4 class="subsection-title">Challenges solved</h4>
+
+<div class="challenge-list">
+
+<div class="challenge-item">
+<span class="label">Threading</span>
+<p>Tracked down and fixed a deadlock in the Ollama inference lock that was silently freezing responses under concurrent calls.</p>
+</div>
+
+<div class="challenge-item">
+<span class="label">Hardware</span>
+<p>Resolved webcam index conflicts between the physical camera and a Camo virtual camera so vision and streaming could run side by side.</p>
+</div>
+
+<div class="challenge-item">
+<span class="label">Vision</span>
+<p>Iterated on moondream prompt formatting to get reliable, structured scene descriptions instead of inconsistent free text.</p>
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<h4 class="subsection-title">What's next</h4>
+
+<div class="roadmap-box">
+Next up: an <strong>activity context module</strong> that tracks whether Kurumi's "owner" is coding, gaming, or streaming, and injects that state into the prompt so reactions feel situationally aware. Long-term, this entire stack is the software foundation for a physical humanoid robot, with MQTT lined up as the bridge to hardware like ESP32 and Raspberry Pi.
+</div>
+
+</div>
+
+<div class="case-cta">
+<a href="https://github.com/alterdyxan-undevs" class="btn-outline">View on GitHub</a>
+<a href="#brain" class="btn-outline">See Architecture Map</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="experiments">
+
+<h2 class="section-title">Other Experiments</h2>
+<p class="section-sub-label">Smaller side builds, mostly explored in parallel with Kurumi.</p>
+
+<div class="other-experiments">
+
+<div class="exp-item">
+<h4>Hand Tracking Mouse</h4>
+<p>Early OpenCV experiment using hand tracking as mouse input — a first step toward gesture-based control.</p>
+</div>
 
 </div>
 
@@ -452,8 +831,9 @@ Tech Stack
 <section id="brain">
 
 <h2 class="section-title">
-Kurumi Hanayume Project <br> <small> - Progress Visualization - </small>
+Architecture Map <br> <small> - Kurumi Hanayume System Overview - </small>
 </h2>
+<p class="section-sub-label">An interactive node graph of every module — memory, vision, voice, and skills — and how they connect.</p>
 
 <!-- nanti isi pyvis -->
 
@@ -520,6 +900,143 @@ card.style.transition = '.8s';
 observer.observe(card);
 
 });
+
+
+/* ===========================
+   ARCHIVE ALTERDYXAN GLITCH
+=========================== */
+
+const glitchName =
+document.getElementById("glitch-name");
+
+const archiveStatus =
+document.getElementById("archive-status");
+
+const glitchChars =
+"0101010101";
+
+function randomChar(){
+
+return glitchChars[
+Math.floor(
+Math.random() * glitchChars.length
+)
+];
+
+}
+
+function glitchTransition(
+newText,
+statusText
+){
+
+archiveStatus.textContent =
+statusText;
+
+let frame = 0;
+
+glitchName.classList.add(
+"glitching"
+);
+
+const interval = setInterval(() => {
+
+let output = "";
+
+for(
+let i = 0;
+i < newText.length;
+i++
+){
+
+if(i < frame){
+
+output += newText[i];
+
+}else{
+
+output += randomChar();
+
+}
+
+}
+
+glitchName.textContent =
+output;
+
+frame += 0.8;
+
+if(frame >= newText.length){
+
+clearInterval(interval);
+
+glitchName.textContent =
+newText;
+
+setTimeout(() => {
+
+glitchName.classList.remove(
+"glitching"
+);
+
+},300);
+
+}
+
+},50);
+
+}
+
+const sequence = [
+
+{
+text:"ARCHIVE ALTERDYXAN",
+status:"[ SYSTEM ONLINE ]"
+},
+
+{
+text:"D1*4S_A**01F",
+status:"[ ARCHIVE BREACH DETECTED ]"
+},
+
+{
+text:"DIMAS AFROIF",
+status:"[ CREATOR RECORD EXPOSED ]"
+},
+
+
+
+{
+text:"A2CH1V3 A1T32DYX4N",
+status:"[ RESTORING SYSTEM... ]"
+}
+
+];
+
+let current = 0;
+
+setTimeout(() => {
+
+glitchTransition(
+"D1M4S_AFR01F",
+
+);
+
+},3500);
+
+setInterval(() => {
+
+current =
+(current + 1)
+%
+sequence.length;
+
+glitchTransition(
+sequence[current].text,
+sequence[current].status
+);
+
+},4000);
 
 </script>
 
